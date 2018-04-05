@@ -1,0 +1,34 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #595959;
+}
+
+.landing-page {
+  background-color: #595959;
+}
+
+footer span {
+  color: yellow;
+}
+
+footer {
+  background: red;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  height: 200px;
+  line-height: 200px;
+}
