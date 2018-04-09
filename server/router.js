@@ -1,10 +1,11 @@
 //Routes the incoming requests to their corresponding controllers
-
+const axios = require('axios');
 const Authentication = require('./controllers/authentication');
 const passportService = require('./services/passport');
 
 //imports passport to assist with authentication.
 const passport = require('passport');
+const keys = require('../config/keys');
 
 //The "session: false" property stops passport from making a cookie based session for the login request, which is default functionality for passport. Since we are using tokens, we don't want that.
 //The first arg is the strategey we are using, in this case the JSON Web Token strategy
@@ -28,4 +29,22 @@ module.exports = function(app) {
   //If the users is not authenticated, passport will respond to the request with a 401 "unauthorized" status response
   app.post('/signin', requireSignin, Authentication.signin);
   app.post('/signup', Authentication.signup);
+
+  //gets the playlist id for the playlists on the channel
+  //const url = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCe31VpdqJEFpvjWF1B_s2mg&key=${keys.YT_API_KEY}`;
+  //other guys
+  //const url = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCk-kzeEguebrp89NQBmDDsg&key=${keys.YT_API_KEY}`;
+  //Uses the playlist id to get the video ids from that playlist
+  //const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=UUe31VpdqJEFpvjWF1B_s2mg&key=${keys.YT_API_KEY}`;
+  //other guys
+  app.get('/youtube', (req, res) => {
+    axios
+      .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUk-kzeEguebrp89NQBmDDsg&key=${keys.YT_API_KEY}`)
+      .then(response => {
+        res.send(response.data.items);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  });
 };

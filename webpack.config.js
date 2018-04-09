@@ -48,7 +48,6 @@ module.exports = {
     contentBase: './'
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV', 'YT_API_KEY']),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),
