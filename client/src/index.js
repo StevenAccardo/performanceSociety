@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router } from 'react-router-dom';
-import { Container } from 'reactstrap';
 import history from './utils/history';
 //Redux middleware that allows us to use functions and call the dispatch() method to send actions to the reducers when we need to instead of using the standard action creator.
 import reduxThunk from 'redux-thunk';
@@ -34,9 +33,9 @@ ReactDOM.render(
   <Provider store={store}>
     {/* Custom Router, that allows us to progamatically change routes outside of components */}
     <Router history={history}>
-      <Container fluid>
+      <div className="container-fluid pl-0 pr-0">
         <App />
-      </Container>
+      </div>
     </Router>
   </Provider>,
   document.querySelector('#app')

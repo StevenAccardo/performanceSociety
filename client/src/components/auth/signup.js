@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form';
 import * as actions from '../../actions';
 import { connect } from 'react-redux';
 import { renderComponent, renderAlert, validate } from '../../utils/signupSigninUtil';
+import '../../../styles/authStyle.css';
 
 class Signup extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Signup extends Component {
     const { handleSubmit } = this.props;
     //Renders 3 Fields with custom input components. One e-mail, and one password, and one password confirmation
     return (
-      <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+      <form className="container mt-3" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
         <div className="form-group">
           <Field name="email" type="input" component={renderComponent} placeholder="E-mail" />
         </div>
@@ -32,7 +33,7 @@ class Signup extends Component {
           <Field name="passwordConfirm" type="password" component={renderComponent} placeholder="Confirm Password" />
         </div>
         {renderAlert(this.props)}
-        <button action="submit" className="btn btn-primary">
+        <button action="submit" className="btn">
           Sign Up
         </button>
       </form>

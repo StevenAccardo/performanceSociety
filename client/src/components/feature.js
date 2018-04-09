@@ -4,6 +4,6 @@ import React from 'react';
 
 function Feature(props) {
   //Renders the protected message
-  return <div>You have been Auth'd!</div>;
+  return <div className="text-white">You have been Auth'd!</div>;
 }
 export default Feature;

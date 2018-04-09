@@ -3,6 +3,7 @@ import ArticleMain from './articleMain';
 import ArticleList from './articleList';
 
 import articleData from './articleData';
+import '../../../styles/articleStyle.css';
 
 class Articles extends Component {
   constructor(props) {
@@ -15,9 +16,20 @@ class Articles extends Component {
   }
   render() {
     return (
-      <div>
-        <ArticleMain selectedArticle={this.state.selectedArticle} />
-        <ArticleList articleArray={this.state.articleArray} />
+      <div className="mt-5 container-fluid article-container">
+        <div className="row">
+          <div className="col-md-8">
+            <ArticleMain selectedArticle={this.state.selectedArticle} />
+          </div>
+          <div className="col-md-4">
+            <ArticleList
+              onArticleSelect={selectedArticle => {
+                this.setState({ selectedArticle });
+              }}
+              articleArray={this.state.articleArray}
+            />
+          </div>
+        </div>
       </div>
     );
   }

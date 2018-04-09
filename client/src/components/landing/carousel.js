@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from 'reactstrap';
 
 import sledPull from '../../../../assets/images/sledPull.jpeg';
-import deadlift from '../../../../assets/images/Deadlift.jpg';
+import deadlift from '../../../../assets/images/Deadlift_cropped.jpg';
 import boxing from '../../../../assets/images/boxing.jpg';
 import intense from '../../../../assets/images/intense.jpg';
 
@@ -69,7 +69,7 @@ class LandingCarousel extends Component {
     });
 
     return (
-      <Carousel activeIndex={activeIndex} next={this.next} previous={this.previous}>
+      <Carousel className="mt-5 mb-5" activeIndex={activeIndex} next={this.next} previous={this.previous}>
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />

@@ -12,7 +12,7 @@ class Signout extends Component {
 
   render() {
     //Renders a goodbye message to user
-    return <div>Sorry to see you go...</div>;
+    return <div className="text-white">Sorry to see you go...</div>;
   }
 }
 

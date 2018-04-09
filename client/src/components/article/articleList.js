@@ -2,13 +2,13 @@ import React from 'react';
 
 import ArticleListItem from './articleListItem';
 
-const ArticleList = ({ articleArray }) => {
+const ArticleList = ({ articleArray, onArticleSelect }) => {
   const renderList = articles => {
     return articles.map((article, index) => {
-      return <ArticleListItem key={index} article={article} />;
+      return <ArticleListItem onArticleSelect={onArticleSelect} key={index} article={article} />;
     });
   };
-  return <div>{renderList(articleArray)}</div>;
+  return <div>{renderList(articleArray, onArticleSelect)}</div>;
 };
 
 export default ArticleList;

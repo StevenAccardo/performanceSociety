@@ -37,9 +37,15 @@ class Videos extends Component {
   }
   render() {
     return (
-      <div className="row">
-        <VideoMain selectedVideo={this.state.selectedVideo} />
-        <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videoArray={this.state.videoArray} />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-8">
+            <VideoMain selectedVideo={this.state.selectedVideo} />
+          </div>
+          <div className="col-md-4 mt-2 mb-2 mt-md-5">
+            <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videoArray={this.state.videoArray} />
+          </div>
+        </div>
       </div>
     );
   }

@@ -4,6 +4,7 @@ import { Container } from 'reactstrap';
 import WorkoutList from './workoutlist';
 
 import WorkoutData from './workoutData';
+import '../../../styles/workoutStyle.css';
 
 class Workouts extends Component {
   constructor(props) {
@@ -16,10 +17,10 @@ class Workouts extends Component {
 
   render() {
     return (
-      <Container>
+      <div className="container workout-main">
         <h1 className="text-center">Workouts</h1>
         <WorkoutList workoutArray={this.state.workoutArray} />
-      </Container>
+      </div>
     );
   }
 }

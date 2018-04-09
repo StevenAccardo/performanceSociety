@@ -4,16 +4,27 @@ const ArticleMain = ({ selectedArticle: { author, date, img, paragraphs, title }
   const authorImg = author.imgLocation;
 
   const authorInfo = author => {
-    if (author.igLink || author.website) {
-      let authorLink = author.igLink ? author.igLink : author.website;
-
+    const socialLink = linkSelection(author);
+    if (socialLink) {
       return (
-        <a target="_blank" href={authorLink}>
-          {author.name}
-        </a>
+        <p>
+          Written By:&nbsp;
+          <a target="_blank" href={socialLink}>
+            {author.name}
+          </a>
+        </p>
       );
     }
     return <p>{author.name}</p>;
+  };
+
+  const linkSelection = author => {
+    if (author.igLink || author.website) {
+      let authorLink = author.igLink ? author.igLink : author.website;
+
+      return authorLink;
+    }
+    return null;
   };
 
   const renderContent = paragraphs => {
@@ -23,10 +34,11 @@ const ArticleMain = ({ selectedArticle: { author, date, img, paragraphs, title }
   };
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{author.name}</p>
-      <img src={authorImg} />
+    <div className="article-main-content p-3 mb-3">
+      <h1 className="text-uppercase font-weight-bold">{title}</h1>
+      <a target="_blank" href={linkSelection(author)}>
+        <img className="author-img rounded mb-5 img-fluid" src={authorImg} />
+      </a>
       {authorInfo(author)}
       {renderContent(paragraphs)}
     </div>

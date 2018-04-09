@@ -1,19 +1,22 @@
 import React from 'react';
 
-import { Media } from 'reactstrap';
-
-const ArticleListItem = ({ article: { title, date, img, author, description } }) => {
-  const image = img;
+const ArticleListItem = ({ article, onArticleSelect }) => {
   return (
-    <Media>
-      <Media left>
-        <Media object src={image} alt="Generic placeholder image" />
-      </Media>
-      <Media body>
-        <Media heading>{title}</Media>
-        {description}
-      </Media>
-    </Media>
+    <li onClick={() => onArticleSelect(article)} className="article-list-item list-group-item mb-2">
+      <div className="video-list media">
+        <div className="media-left mr-3 rounded">
+          <img className="media-object img-fluid" src={article.img} />
+        </div>
+
+        <div className="media-body">
+          <div className="media-heading font-weight-bold text-uppercase">{article.title}</div>
+          <p>{article.description}</p>
+
+          <p className="m-0">Author: {article.author.name}</p>
+          <p className="m-0">Date: {article.date}</p>
+        </div>
+      </div>
+    </li>
   );
 };
 

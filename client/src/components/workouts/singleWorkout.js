@@ -12,9 +12,9 @@ const SingleWorkout = ({ workout: { title, date, workouts } }) => {
     <div>
       <Card className="mb-3">
         <CardBody>
-          <CardTitle>{title}</CardTitle>
-          <CardSubtitle>{date}</CardSubtitle>
-          <div className="card-text text-center">{renderWorkouts(workouts)}</div>
+          <CardTitle className="text-center mb-3 font-weight-bold">{title}</CardTitle>
+          <CardSubtitle className="text-center mb-3 font-weight-bold">{date}</CardSubtitle>
+          <CardText className="text-center">{renderWorkouts(workouts)}</CardText>
         </CardBody>
       </Card>
     </div>

@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { NavLink as RRNavLink, Link } from 'react-router-dom';
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 import logo from '../../../assets/images/PS-Logo.png';
+import IG_logo_white from '../../../assets/images/IG_logo_white.png';
+import IG_logo_teal from '../../../assets/images/IG_logo_teal.png';
 
 class Header extends Component {
   constructor(props) {
@@ -52,7 +54,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <Navbar className="bg-dark" dark expand="md">
+      <Navbar dark expand="md">
         {/* Takes the place of a logo, or somehting similar, that will take the user to the root route. */}
         <NavbarBrand tag={RRNavLink} to={'/'}>
           <img src={logo} alt="Perfomance Society" />
@@ -60,7 +62,13 @@ class Header extends Component {
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto">
-            <NavItem active>
+            <NavItem>
+              <a className="nav-link" target="_blank" href="https://www.instagram.com/performancesociety/">
+                <img src={IG_logo_white} />
+                <img src={IG_logo_teal} />
+              </a>
+            </NavItem>
+            <NavItem>
               <NavLink tag={RRNavLink} to={'/workouts'}>
                 Workouts
               </NavLink>

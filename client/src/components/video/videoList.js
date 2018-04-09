@@ -8,7 +8,7 @@ const VideoList = ({ videoArray, onVideoSelect }) => {
       return <VideoListItem key={video.etag} onVideoSelect={onVideoSelect} video={video} />;
     });
   };
-  return <div className="col-md-8">{renderList(videoArray)}</div>;
+  return <div>{renderList(videoArray)}</div>;
 };
 
 export default VideoList;

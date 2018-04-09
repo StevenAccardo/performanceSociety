@@ -4,7 +4,8 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import LandingCarousel from './Carousel';
 
-import makeChange from '../../../../assets/images/make_change.png';
+import makeChange from '../../../../assets/images/make_change_teal.png';
+import '../../../styles/landingStyle.css';
 
 export default () => {
   return (
