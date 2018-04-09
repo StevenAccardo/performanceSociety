@@ -7,6 +7,7 @@ import '../../../styles/videoStyle.css';
 
 class Videos extends Component {
   constructor(props) {
+    console.log('keys', keys);
     super(props);
 
     this.state = {
