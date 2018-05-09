@@ -84,7 +84,7 @@ class Header extends Component {
               </NavLink>
             </NavItem>
             {/* Calls function that checks state to determine how header will be rendered */}
-            {this.renderLinks()}
+            {/* {this.renderLinks()} */}
           </Nav>
         </Collapse>
       </Navbar>
