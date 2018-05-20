@@ -1,0 +1,64 @@
+.articleContent {
+  background-color: $lightGrey;
+  @include border-radius(5px);
+  @include box-shadow(0 4px 8px 10px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 6px 20px 10px rgba(0, 0, 0, 0.19));
+}
+
+.articleContent__authorLink__authorImg {
+  @include box-shadow(0 4px 8px 4px rgba(0, 0, 0, 0.5));
+  @include box-shadow(0 6px 20px 4px rgba(0, 0, 0, 0.5));
+  max-width: 100%;
+  height: auto;
+}
+
+.articleContent__authorLink__authorImg:hover {
+  @include box-shadow(0 4px 8px 4px $teal);
+}
+
+.articleContent__authorName__Link {
+  color: black;
+}
+
+.articleContent__authorName__Link:hover {
+  @include text-shadow(2px 2px 10px black);
+  color: $teal;
+  text-decoration: none;
+}
+
+.articleContent__paragraph:not(:first-of-type) {
+  text-indent: 2rem;
+  font-size: 1.7rem;
+}
+
+.articleListItem {
+  cursor: pointer;
+  background-color: $lightGrey;
+  @include box-shadow(0 4px 8px 10px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 6px 20px 10px rgba(0, 0, 0, 0.19));
+}
+
+.articleListItem:hover {
+  background-color: $teal;
+}
+
+.articleListItem__imageBox__image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .articleContent__paragraph:not(:first-of-type) {
+    font-size: 1rem;
+  }
+
+  .articleListItem__imageBox__image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .articleListItem__imageBox__image {
+    display: none;
+  }
+}

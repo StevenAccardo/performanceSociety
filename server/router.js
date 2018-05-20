@@ -31,15 +31,22 @@ module.exports = function(app) {
   app.post('/signup', Authentication.signup);
 
   //gets the playlist id for the playlists on the channel
+  //Performance Society channel ID
   //const url = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCe31VpdqJEFpvjWF1B_s2mg&key=${keys.YT_API_KEY}`;
-  //other guys
+
+  //Test Channel ID
   //const url = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCk-kzeEguebrp89NQBmDDsg&key=${keys.YT_API_KEY}`;
+
   //Uses the playlist id to get the video ids from that playlist
+  //Performance Society playlist ID
   //const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=UUe31VpdqJEFpvjWF1B_s2mg&key=${keys.YT_API_KEY}`;
-  //other guys
+
+  //Test Playlist ID
+  //const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUZ3pRJ2v8B_VP0ng3I6asvQ&key=${keys.YT_API_KEY}`
+
   app.get('/youtube', (req, res) => {
     axios
-      .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUk-kzeEguebrp89NQBmDDsg&key=${keys.YT_API_KEY}`)
+      .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUZ3pRJ2v8B_VP0ng3I6asvQ&key=${keys.YT_API_KEY}`)
       .then(response => {
         res.send(response.data.items);
       })

@@ -8,7 +8,7 @@ const ArticleList = ({ articleArray, onArticleSelect }) => {
       return <ArticleListItem onArticleSelect={onArticleSelect} key={index} article={article} />;
     });
   };
-  return <div>{renderList(articleArray, onArticleSelect)}</div>;
+  return <div className="articleList">{renderList(articleArray, onArticleSelect)}</div>;
 };
 
 export default ArticleList;

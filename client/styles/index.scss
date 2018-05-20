@@ -1,0 +1,27 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import '_variables';
+@import '_mixins';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 170px;
+  background-color: $smokeyGrey;
+  font-size: 16px;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+@import 'components/_header';
+@import 'components/_article';
+@import 'components/_auth';
+@import 'components/_landing';
+@import 'components/_video';
+@import 'components/_workout';
+@import 'components/_footer';

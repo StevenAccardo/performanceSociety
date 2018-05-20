@@ -1,0 +1,37 @@
+.navbar {
+  background-color: $black;
+}
+.navbar-brand:hover {
+  @include box-shadow(0 0 5px 5px $teal);
+}
+
+.nav__navLink {
+  color: white;
+}
+
+.nav__navLink:hover {
+  color: $black;
+  background-color: $teal;
+  @include border-radius(5px);
+}
+
+.nav-item:first-of-type a img {
+  height: 30px;
+  width: 30px;
+}
+
+.igLink:hover {
+  background-color: transparent;
+}
+
+.igLink .igImage--teal {
+  display: none;
+}
+
+.igLink:hover .igImage--white {
+  display: none;
+}
+
+.igLink:hover .igImage--teal {
+  display: inline-block;
+}

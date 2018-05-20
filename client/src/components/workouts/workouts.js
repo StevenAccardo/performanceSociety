@@ -4,7 +4,6 @@ import { Container } from 'reactstrap';
 import WorkoutList from './workoutlist';
 
 import WorkoutData from './workoutData';
-import '../../../styles/workoutStyle.css';
 
 class Workouts extends Component {
   constructor(props) {
@@ -17,8 +16,8 @@ class Workouts extends Component {
 
   render() {
     return (
-      <div className="container workout-main">
-        <h1 className="text-center">Workouts</h1>
+      <div className="container workoutPage">
+        <h1 className="workoutPage__title">Workouts</h1>
         <WorkoutList workoutArray={this.state.workoutArray} />
       </div>
     );

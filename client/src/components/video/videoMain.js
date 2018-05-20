@@ -13,25 +13,19 @@ const VideoMain = ({ selectedVideo }) => {
   const url = `https://www.youtube.com/embed/${videoId}`;
   return (
     <div>
-      <div className="video-main embed-responsive embed-responsive-16by9 mt-5">
+      <div className="videoMain embed-responsive embed-responsive-16by9 mt-5">
         <iframe className="embed-responsive-item" src={url} />
       </div>
       <div className="details mt-3">
         <Card className="mb-3">
           <CardBody>
-            <CardTitle>{title}</CardTitle>
-            <CardText>{description}</CardText>
+            <CardTitle className="details__title">{title}</CardTitle>
+            <CardText className="details__description">{description}</CardText>
           </CardBody>
         </Card>
       </div>
     </div>
   );
 };
-
-// <CardBody>
-//   <CardTitle className="text-center mb-3 font-weight-bold">{title}</CardTitle>
-//   <CardSubtitle className="text-center mb-3 font-weight-bold">{date}</CardSubtitle>
-//   <div className="card-text text-center">{renderWorkouts(workouts)}</div>
-// </CardBody>
 
 export default VideoMain;

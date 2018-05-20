@@ -5,11 +5,10 @@ import { Container, Row, Col } from 'reactstrap';
 import LandingCarousel from './Carousel';
 
 import makeChange from '../../../../assets/images/make_change_teal.png';
-import '../../../styles/landingStyle.css';
 
 export default () => {
   return (
-    <div className="landing-page">
+    <div className="landingPage">
       <Container>
         <Row>
           <Col>

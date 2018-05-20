@@ -29,7 +29,7 @@ class Header extends Component {
       //show a link to sign out
       return (
         <NavItem>
-          <NavLink tag={RRNavLink} to={'/signout'}>
+          <NavLink className="nav__navLink" tag={RRNavLink} to={'/signout'}>
             Sign Out
           </NavLink>
         </NavItem>
@@ -40,12 +40,12 @@ class Header extends Component {
       //keys were chosen since these list items will not change over time.
       return [
         <NavItem key={1}>
-          <NavLink tag={RRNavLink} to={'/signin'}>
+          <NavLink className="nav__navLink" tag={RRNavLink} to={'/signin'}>
             Sign In
           </NavLink>
         </NavItem>,
         <NavItem key={2}>
-          <NavLink tag={RRNavLink} to={'/signup'}>
+          <NavLink className="nav__navLink" tag={RRNavLink} to={'/signup'}>
             Sign Up
           </NavLink>
         </NavItem>
@@ -63,23 +63,23 @@ class Header extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto">
             <NavItem>
-              <a className="nav-link" target="_blank" href="https://www.instagram.com/performancesociety/">
-                <img src={IG_logo_white} />
-                <img src={IG_logo_teal} />
+              <a className="nav-link igLink" target="_blank" href="https://www.instagram.com/performancesociety/">
+                <img className="igImage--white" src={IG_logo_white} />
+                <img className="igImage--teal" src={IG_logo_teal} />
               </a>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to={'/workouts'}>
+              <NavLink className="nav__navLink" tag={RRNavLink} to={'/workouts'}>
                 Workouts
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to={'/articles'}>
+              <NavLink className="nav__navLink" tag={RRNavLink} to={'/articles'}>
                 Articles
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to={'/videos'}>
+              <NavLink className="nav__navLink" tag={RRNavLink} to={'/videos'}>
                 Videos
               </NavLink>
             </NavItem>

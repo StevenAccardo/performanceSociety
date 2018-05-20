@@ -1,0 +1,10 @@
+.workoutPage__title {
+  color: white;
+  text-align: center;
+}
+
+.workoutCard {
+  @include box-shadow(0 4px 8px 10px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 6px 20px 10px rgba(0, 0, 0, 0.19));
+  background-color: $lightGrey;
+}

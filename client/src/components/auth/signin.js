@@ -3,7 +3,6 @@ import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import { renderComponent, renderAlert, validate } from '../../utils/signupSigninUtil';
-import '../../../styles/authStyle.css';
 
 class Signin extends Component {
   constructor(props) {

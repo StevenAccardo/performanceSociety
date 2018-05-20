@@ -7,9 +7,9 @@ const ArticleMain = ({ selectedArticle: { author, date, img, paragraphs, title }
     const socialLink = linkSelection(author);
     if (socialLink) {
       return (
-        <p>
+        <p className="articleContent__authorName">
           Written By:&nbsp;
-          <a target="_blank" href={socialLink}>
+          <a className="articleContent__authorName__Link" target="_blank" href={socialLink}>
             {author.name}
           </a>
         </p>
@@ -29,15 +29,19 @@ const ArticleMain = ({ selectedArticle: { author, date, img, paragraphs, title }
 
   const renderContent = paragraphs => {
     return paragraphs.map((paragraph, index) => {
-      return <p key={index}>{paragraph}</p>;
+      return (
+        <p className="articleContent__paragraph" key={index}>
+          {paragraph}
+        </p>
+      );
     });
   };
 
   return (
-    <div className="article-main-content p-3 mb-3">
-      <h1 className="text-uppercase font-weight-bold">{title}</h1>
-      <a target="_blank" href={linkSelection(author)}>
-        <img className="author-img rounded mb-5 img-fluid" src={authorImg} />
+    <div className="articleContent p-3 mb-3">
+      <h1 className="articleContent__title text-uppercase font-weight-bold">{title}</h1>
+      <a clasName="articleContent__authorLink" target="_blank" href={linkSelection(author)}>
+        <img className="articleContent__authorLink__authorImg rounded mb-5 img-fluid" src={authorImg} />
       </a>
       {authorInfo(author)}
       {renderContent(paragraphs)}

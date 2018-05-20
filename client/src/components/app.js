@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
 import Header from './header';
@@ -17,7 +17,7 @@ export default class App extends Component {
   render() {
     return (
       //Always renders Header, renders other routes depending on url
-      <div>
+      <Fragment>
         <Header />
         <Route exact path="/" component={Landing} />
         <Route exact path="/workouts" component={Workouts} />
@@ -30,7 +30,7 @@ export default class App extends Component {
         {/* You can wrap any component with your hoc in order to provide that component with the hoc functionality. In this case it will make the wrapped component a protected component that the user can only visit if authenticated. */}
         <Route path="/feature" component={RequireAuth(Feature)} />
         <Footer />
-      </div>
+      </Fragment>
     );
   }
 }

@@ -9,7 +9,7 @@ const WorkoutList = ({ workoutArray }) => {
     });
   };
 
-  return <div className="workout-list pb-2">{renderWorkouts(workoutArray)}</div>;
+  return <div className="workoutList pb-2">{renderWorkouts(workoutArray)}</div>;
 };
 
 export default WorkoutList;

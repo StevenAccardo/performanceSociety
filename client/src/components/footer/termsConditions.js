@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsConditions = props => {
   return (
-    <div className="terms-conditions container">
+    <div className="termsConditions container">
       <h1>Terms & Conditions</h1>
       <h4>Credit</h4>
       <h4>Introduction</h4>

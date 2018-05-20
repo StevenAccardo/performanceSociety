@@ -11,47 +11,30 @@ const Footer = props => {
     <div>
       <Route exact path="/termsConditions" component={TermsConditions} />
       <Route exact path="/privacyPolicy" component={PrivacyPolicy} />
-      <footer className="text-center align-middle">
+      <footer className="footer text-center align-middle">
         <div className="container-fluid">
-          <p>
-            #PERFORM<span>TRAIN</span>LIVE
-            <a className="footer-ig-link ml-3" target="_blank" href="https://www.instagram.com/performancesociety/">
-              <img src={IG_logo_white} />
-              <img src={IG_logo_teal} />
+          <p className="footer__social">
+            #PERFORM<span className="footer__social__span">TRAIN</span>LIVE
+            <a className="footer__igLink ml-3" target="_blank" href="https://www.instagram.com/performancesociety/">
+              <img className="footer__igLink__image--white" src={IG_logo_white} />
+              <img className="footer__igLink__image--teal" src={IG_logo_teal} />
             </a>
           </p>
           <p>© 2015 PERFORMANCE SOCIETY. ALL RIGHTS RESERVED.</p>
           <span className="mr-1">
-            <Link to="/termsConditions">Terms & Conditions</Link>
+            <Link className="termsConditionsLink" to="/termsConditions">
+              Terms & Conditions
+            </Link>
           </span>
           <span className="ml-1">
-            <Link to="privacyPolicy">Privacy Policy</Link>
+            <Link className="privacyPolicyLink" to="privacyPolicy">
+              Privacy Policy
+            </Link>
           </span>
         </div>
       </footer>
     </div>
   );
 };
-
-// return (
-//   <div>
-//     <Route exact path="/termsConditions" component={TermsConditions} />
-//     <Route exact path="/privacyPolicy" component={PrivacyPolicy} />
-//     <footer>
-//       <p className="text-center">
-//         #PERFORM<span>TRAIN</span>LIVE
-//       </p>
-//       <p className="text-center">© 2015 PERFORMANCE SOCIETY. ALL RIGHTS RESERVED.</p>
-//       <p className="text-center">
-//         <span>
-//           <Link to="/termsConditions">Terms & Conditions</Link>
-//         </span>
-//         <span>
-//           <Link to="privacyPolicy">Privacy Policy</Link>
-//         </span>
-//       </p>
-//     </footer>
-//   </div>
-// );
 
 export default Footer;

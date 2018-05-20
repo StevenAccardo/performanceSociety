@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import VideoMain from './videoMain';
 import VideoList from './videoList';
-import '../../../styles/videoStyle.css';
 
 class Videos extends Component {
   constructor(props) {
@@ -14,7 +13,7 @@ class Videos extends Component {
     };
 
     let ROOT_URL;
-    process.env.NODE_ENV === 'production' ? (ROOT_URL = 'https://polar-chamber-57634.herokuapp.com') : (ROOT_URL = 'http://localhost:3000');
+    process.env.NODE_ENV === 'production' ? (ROOT_URL = 'https://performancesociety.herokuapp.com') : (ROOT_URL = 'http://localhost:3000');
 
     axios
       .get(`${ROOT_URL}/youtube`)

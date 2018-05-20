@@ -10,7 +10,7 @@ const SingleWorkout = ({ workout: { title, date, workouts } }) => {
 
   return (
     <div>
-      <Card className="mb-3">
+      <Card className="workoutCard mb-3">
         <CardBody>
           <CardTitle className="text-center mb-3 font-weight-bold">{title}</CardTitle>
           <CardSubtitle className="text-center mb-3 font-weight-bold">{date}</CardSubtitle>

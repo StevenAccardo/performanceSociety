@@ -1,0 +1,48 @@
+.videoMmain {
+  @include box-shadow(0 4px 8px 10px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 6px 20px 10px rgba(0, 0, 0, 0.19));
+  @include border-radius(5px);
+}
+
+.details {
+  background-color: $lightGrey;
+  color: black;
+}
+
+.videoListItem {
+  cursor: pointer;
+  background-color: $lightGrey;
+  @include box-shadow(0 4px 8px 10px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 6px 20px 10px rgba(0, 0, 0, 0.19));
+}
+
+.videoListItem:hover {
+  background-color: $teal;
+}
+
+@media screen and (max-width: 800px) {
+  .details__title {
+    font-size: 1rem;
+  }
+  .details__description {
+    font-size: 0.6rem;
+  }
+  .videoListItem__box__videoTitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) and (orientation: portrait) {
+  .videoListItem__box__imageBox__image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 850px) and (orientation: landscape) {
+  .videoListItem__box__imageBox__image {
+    display: none;
+  }
+  .videoListItem__box__videoTitle {
+    font-size: 0.7rem;
+  }
+}

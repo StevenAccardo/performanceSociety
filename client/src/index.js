@@ -7,9 +7,7 @@ import history from './utils/history';
 //Redux middleware that allows us to use functions and call the dispatch() method to send actions to the reducers when we need to instead of using the standard action creator.
 import reduxThunk from 'redux-thunk';
 
-//imports css file so webpack can access it
-import 'bootstrap/dist/css/bootstrap.css';
-import '../styles/style.css';
+import '../styles/index.scss';
 
 import App from './components/app';
 import reducers from './reducers';
